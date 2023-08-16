@@ -15,6 +15,7 @@ function GroceryList({ items, onDeleteItem, onToggleItem, onClearItems }) {
       break;
     default:
       sortedItems = items;
+      break;
   }
 
   return (
