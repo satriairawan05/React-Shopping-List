@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Header, Footer, Form, GroceryList } from "./components";
 import { groceryItems } from "./utils";
-import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [items, setItems] = useState(groceryItems);
@@ -29,9 +28,6 @@ function App() {
         <Form onAddItem={handleAddItem} />
         <GroceryList items={items} onDeleteItem={handleDeleteItem} onToggleItem={handleToggleItem} onClearItems={handleClearItems} />
         <Footer items={items} />
-        <div>
-          <Analytics />
-        </div>
       </div>
     </>
   );
