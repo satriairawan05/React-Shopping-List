@@ -1,4 +1,4 @@
-function Item({ item, onDeleteItem, onToggleItem }) {
+const Item = ({ item, onDeleteItem, onToggleItem }) => {
   return (
     <>
       <li key={item.id}>
@@ -10,6 +10,6 @@ function Item({ item, onDeleteItem, onToggleItem }) {
       </li>
     </>
   );
-}
+};
 
 export default Item;

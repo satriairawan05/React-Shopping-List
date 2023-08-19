@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Item from "./Item";
 
-function GroceryList({ items, onDeleteItem, onToggleItem, onClearItems }) {
+const GroceryList = ({ items, onDeleteItem, onToggleItem, onClearItems }) => {
   const [sortBy, setSortBy] = useState("input");
 
   let sortedItems;
@@ -37,6 +37,6 @@ function GroceryList({ items, onDeleteItem, onToggleItem, onClearItems }) {
       </div>
     </>
   );
-}
+};
 
 export default GroceryList;

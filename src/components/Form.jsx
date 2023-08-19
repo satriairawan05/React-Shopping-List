@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { quantityNum } from "../utils";
 
-function Form({ onAddItem }) {
+const Form = ({ onAddItem }) => {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!name) return;
@@ -15,7 +15,7 @@ function Form({ onAddItem }) {
 
     setName("");
     setQuantity(1);
-  }
+  };
 
   return (
     <>
@@ -29,6 +29,6 @@ function Form({ onAddItem }) {
       </form>
     </>
   );
-}
+};
 
 export default Form;

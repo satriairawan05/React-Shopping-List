@@ -2,24 +2,24 @@ import { useState } from "react";
 import { Header, Footer, Form, GroceryList } from "./components";
 import { groceryItems } from "./utils";
 
-function App() {
+const App = () => {
   const [items, setItems] = useState(groceryItems);
 
-  function handleAddItem(item) {
+  const handleAddItem = (item) => {
     setItems([...items, item]);
-  }
+  };
 
-  function handleDeleteItem(id) {
+  const handleDeleteItem = (id) => {
     setItems((items) => items.filter((item) => item.id != id));
-  }
+  };
 
-  function handleToggleItem(id) {
+  const handleToggleItem = (id) => {
     setItems((items) => items.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)));
-  }
+  };
 
-  function handleClearItems() {
+  const handleClearItems = () => {
     setItems([]);
-  }
+  };
 
   return (
     <>
@@ -31,6 +31,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

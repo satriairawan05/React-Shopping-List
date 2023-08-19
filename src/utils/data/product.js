@@ -19,7 +19,7 @@ const groceryItems = [
   },
   {
     id: 4,
-    name: "Chitato",
+    name: "Keripik Kentang",
     quantity: 5,
     checked: false,
   },
